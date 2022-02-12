@@ -1,0 +1,11 @@
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\bin\Debug\Menu.exe.config
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\bin\Debug\Menu.exe
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\bin\Debug\Menu.pdb
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.csproj.AssemblyReference.cache
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.Menu.resources
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.Options.resources
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.Properties.Resources.resources
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.csproj.GenerateResource.cache
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.csproj.CoreCompileInputs.cache
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.exe
+D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.pdb

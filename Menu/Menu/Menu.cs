@@ -18,9 +18,9 @@ namespace Menu
         }
 
         private void play_Click(object sender, EventArgs e)
-        {
-            Game game = new Game();
-            game.Show();
+        {            
+            Game game = new Game();            
+            game.Show();            
         }
 
         private void options_Click(object sender, EventArgs e)

@@ -36,8 +36,9 @@ namespace Menu
             // 
             // play
             // 
+            this.play.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.play.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.play.Location = new System.Drawing.Point(313, 72);
+            this.play.Location = new System.Drawing.Point(339, 169);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(158, 59);
             this.play.TabIndex = 0;
@@ -47,8 +48,9 @@ namespace Menu
             // 
             // options
             // 
+            this.options.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.options.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.options.Location = new System.Drawing.Point(313, 137);
+            this.options.Location = new System.Drawing.Point(339, 234);
             this.options.Name = "options";
             this.options.Size = new System.Drawing.Size(158, 59);
             this.options.TabIndex = 1;
@@ -58,10 +60,11 @@ namespace Menu
             // 
             // exit
             // 
+            this.exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.exit.Location = new System.Drawing.Point(350, 202);
+            this.exit.Location = new System.Drawing.Point(370, 299);
             this.exit.Name = "exit";
-            this.exit.Size = new System.Drawing.Size(84, 30);
+            this.exit.Size = new System.Drawing.Size(87, 39);
             this.exit.TabIndex = 2;
             this.exit.Text = "Exit";
             this.exit.UseVisualStyleBackColor = true;
@@ -71,7 +74,7 @@ namespace Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 344);
+            this.ClientSize = new System.Drawing.Size(840, 503);
             this.Controls.Add(this.exit);
             this.Controls.Add(this.options);
             this.Controls.Add(this.play);

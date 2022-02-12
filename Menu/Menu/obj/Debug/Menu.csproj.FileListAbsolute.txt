@@ -9,3 +9,16 @@ D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.csproj.GenerateRe
 D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.csproj.CoreCompileInputs.cache
 D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.exe
 D:\Antonín Štolfa\Programování\C#\Menu\Menu\obj\Debug\Menu.pdb
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\bin\Debug\Menu.exe.config
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\bin\Debug\Menu.exe
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\bin\Debug\Menu.pdb
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.AssemblyReference.cache
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.SuggestedBindingRedirects.cache
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Menu.resources
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Options.resources
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Properties.Resources.resources
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.GenerateResource.cache
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.CoreCompileInputs.cache
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.exe
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.pdb
+C:\Users\marsy\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Game.resources

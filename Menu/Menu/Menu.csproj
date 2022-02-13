@@ -46,6 +46,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ChallengeGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ChallengeGame.Designer.cs">
+      <DependentUpon>ChallengeGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Customize.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Customize.Designer.cs">
+      <DependentUpon>Customize.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Difficulty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Difficulty.Designer.cs">
+      <DependentUpon>Difficulty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EndlessGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EndlessGame.Designer.cs">
+      <DependentUpon>EndlessGame.cs</DependentUpon>
+    </Compile>
     <Compile Include="Game.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -104,20 +104,16 @@ namespace Menu
                 {
                     switch (direction)
                     {
-                        case "left":
-                            label1.Text = "doleva";
+                        case "left":                           
                             Snake[i].X--;
                             break;
-                        case "right":
-                            label1.Text = "doprava";
+                        case "right":                            
                             Snake[i].X++;
                             break;
-                        case "down":
-                            label1.Text = "dolu";
+                        case "down":                            
                             Snake[i].Y++;
                             break;
-                        case "up":
-                            label1.Text = "nahoru";
+                        case "up":                            
                             Snake[i].Y--;
                             break;
                     }

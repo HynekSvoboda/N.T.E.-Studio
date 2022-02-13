@@ -35,7 +35,6 @@ namespace Menu
             this.score_lbl = new System.Windows.Forms.Label();
             this.highscore_lbl = new System.Windows.Forms.Label();
             this.tick_timer = new System.Windows.Forms.Timer(this.components);
-            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.snake_picBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -82,27 +81,19 @@ namespace Menu
             // 
             // tick_timer
             // 
+            this.tick_timer.Interval = 50;
             this.tick_timer.Tick += new System.EventHandler(this.tick_timer_Tick);
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(765, 323);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "label1";
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1004, 781);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.highscore_lbl);
             this.Controls.Add(this.score_lbl);
             this.Controls.Add(this.start_button);
             this.Controls.Add(this.snake_picBox);
+            this.KeyPreview = true;
             this.Name = "Game";
             this.Text = "Game";
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
@@ -120,6 +111,5 @@ namespace Menu
         private System.Windows.Forms.Label score_lbl;
         private System.Windows.Forms.Label highscore_lbl;
         private System.Windows.Forms.Timer tick_timer;
-        private System.Windows.Forms.Label label1;
     }
 }

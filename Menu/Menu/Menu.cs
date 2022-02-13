@@ -33,5 +33,15 @@ namespace Menu
         {
             Close();
         }
+
+        private void play_MouseEnter(object sender, EventArgs e)
+        {
+            play.BackColor = Color.DarkBlue;
+        }
+
+        private void play_MouseLeave(object sender, EventArgs e)
+        {
+            play.BackColor = Color.LightGray;
+        }
     }
 }

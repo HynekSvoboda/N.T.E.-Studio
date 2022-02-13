@@ -49,6 +49,8 @@ namespace Menu
             this.play.Text = "Play";
             this.play.UseVisualStyleBackColor = true;
             this.play.Click += new System.EventHandler(this.play_Click);
+            this.play.MouseEnter += new System.EventHandler(this.play_MouseEnter);
+            this.play.MouseLeave += new System.EventHandler(this.play_MouseLeave);
             // 
             // options
             // 

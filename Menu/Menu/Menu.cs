@@ -17,6 +17,8 @@ namespace Menu
             InitializeComponent();
         }
 
+        
+
         private void play_Click(object sender, EventArgs e)
         {            
             Game game = new Game();

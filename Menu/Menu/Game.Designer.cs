@@ -43,7 +43,7 @@ namespace Menu
             this.snake_picBox.BackColor = System.Drawing.Color.LightGreen;
             this.snake_picBox.Location = new System.Drawing.Point(75, 44);
             this.snake_picBox.Name = "snake_picBox";
-            this.snake_picBox.Size = new System.Drawing.Size(624, 624);
+            this.snake_picBox.Size = new System.Drawing.Size(1325, 825);
             this.snake_picBox.TabIndex = 0;
             this.snake_picBox.TabStop = false;
             this.snake_picBox.Paint += new System.Windows.Forms.PaintEventHandler(this.snake_picBox_Paint);
@@ -51,7 +51,7 @@ namespace Menu
             // start_button
             // 
             this.start_button.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_button.Location = new System.Drawing.Point(742, 44);
+            this.start_button.Location = new System.Drawing.Point(1600, 44);
             this.start_button.Name = "start_button";
             this.start_button.Size = new System.Drawing.Size(192, 86);
             this.start_button.TabIndex = 1;
@@ -63,7 +63,7 @@ namespace Menu
             // 
             this.score_lbl.AutoSize = true;
             this.score_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score_lbl.Location = new System.Drawing.Point(739, 177);
+            this.score_lbl.Location = new System.Drawing.Point(1597, 177);
             this.score_lbl.Name = "score_lbl";
             this.score_lbl.Size = new System.Drawing.Size(65, 18);
             this.score_lbl.TabIndex = 2;
@@ -73,7 +73,7 @@ namespace Menu
             // 
             this.highscore_lbl.AutoSize = true;
             this.highscore_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highscore_lbl.Location = new System.Drawing.Point(739, 212);
+            this.highscore_lbl.Location = new System.Drawing.Point(1597, 212);
             this.highscore_lbl.Name = "highscore_lbl";
             this.highscore_lbl.Size = new System.Drawing.Size(99, 18);
             this.highscore_lbl.TabIndex = 3;
@@ -81,21 +81,24 @@ namespace Menu
             // 
             // tick_timer
             // 
-            this.tick_timer.Interval = 50;
+            this.tick_timer.Interval = 40;
             this.tick_timer.Tick += new System.EventHandler(this.tick_timer_Tick);
             // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1004, 781);
+            this.ClientSize = new System.Drawing.Size(1846, 905);
             this.Controls.Add(this.highscore_lbl);
             this.Controls.Add(this.score_lbl);
             this.Controls.Add(this.start_button);
             this.Controls.Add(this.snake_picBox);
             this.KeyPreview = true;
             this.Name = "Game";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Game";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Game_KeyDown);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Game_KeyUp);
             ((System.ComponentModel.ISupportInitialize)(this.snake_picBox)).EndInit();

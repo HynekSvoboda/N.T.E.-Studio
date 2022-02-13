@@ -37,8 +37,8 @@ namespace Menu
         public Game()
         {
             InitializeComponent();
-            Width = 16;
-            Height = 16;
+            Width = 20;
+            Height = 20;
             if (!once)
             {
                 once = true;
@@ -48,7 +48,7 @@ namespace Menu
 
         private void start_button_Click(object sender, EventArgs e)
         {
-            Restart();
+            Restart();            
         }
 
         public void Restart()
@@ -62,10 +62,10 @@ namespace Menu
             score = 0;
             score_lbl.Text = "Score: " + score;
 
-            Circle head = new Circle { X = 10, Y = 5 };
+            Circle head = new Circle { X = 10, Y = 10 };
             Snake.Add(head);
 
-            for (int i = 0; i < 3; i++)
+            for (int i = 0; i < 8; i++)
             {
                 Circle body = new Circle();
                 Snake.Add(body);
@@ -98,7 +98,7 @@ namespace Menu
             if (goDown) direction = "down";
             if (goUp) direction = "up";
 
-            for (int i = Snake.Count-1; i >= 0; i--)
+            for (int i = Snake.Count - 1; i >= 0; i--)
             {               
                 if (i == 0)
                 {
@@ -119,7 +119,7 @@ namespace Menu
                     }
 
                     /*if (Snake[i].X < 0) GameOver();
-                    if (Snake[i].X > maxWitdh) GameOver();
+                    if (Snake[i].X > maxWidth) GameOver();
                     if (Snake[i].Y < 0) GameOver();
                     if (Snake[i].Y > maxHeight) GameOver();*/
 
@@ -153,10 +153,10 @@ namespace Menu
 
         private void Game_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.W) goUp = true;
+            /*if (e.KeyCode == Keys.W) goUp = true;
             if (e.KeyCode == Keys.S) goDown = true;
             if (e.KeyCode == Keys.A) goLeft = true;
-            if (e.KeyCode == Keys.D) goRight = true;
+            if (e.KeyCode == Keys.D) goRight = true;*/
             
             if (e.KeyCode == Keys.Left && direction != "right")
             {

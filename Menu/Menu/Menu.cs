@@ -19,8 +19,10 @@ namespace Menu
 
         private void play_Click(object sender, EventArgs e)
         {            
-            Game game = new Game();            
-            game.Show();            
+            Game game = new Game();
+            this.Hide();
+            game.ShowDialog();
+            this.Close();
         }
 
         private void options_Click(object sender, EventArgs e)

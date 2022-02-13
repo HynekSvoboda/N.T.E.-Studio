@@ -47,3 +47,16 @@ C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.c
 C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.CoreCompileInputs.cache
 C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.exe
 C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.pdb
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\bin\Debug\Menu.exe.config
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\bin\Debug\Menu.exe
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\bin\Debug\Menu.pdb
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.AssemblyReference.cache
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.SuggestedBindingRedirects.cache
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Game.resources
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Menu.resources
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Options.resources
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Properties.Resources.resources
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.GenerateResource.cache
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.CoreCompileInputs.cache
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.exe
+C:\Users\i5\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.pdb

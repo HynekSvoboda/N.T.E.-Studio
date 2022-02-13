@@ -34,13 +34,15 @@ namespace Menu
             this.exit = new System.Windows.Forms.Button();
             this.customize = new System.Windows.Forms.Button();
             this.difficulty = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // play
             // 
             this.play.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.play.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.play.Location = new System.Drawing.Point(339, 104);
+            this.play.Location = new System.Drawing.Point(337, 172);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(158, 59);
             this.play.TabIndex = 0;
@@ -52,7 +54,7 @@ namespace Menu
             // 
             this.options.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.options.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.options.Location = new System.Drawing.Point(339, 299);
+            this.options.Location = new System.Drawing.Point(337, 367);
             this.options.Name = "options";
             this.options.Size = new System.Drawing.Size(158, 59);
             this.options.TabIndex = 1;
@@ -64,7 +66,7 @@ namespace Menu
             // 
             this.exit.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.exit.Location = new System.Drawing.Point(371, 364);
+            this.exit.Location = new System.Drawing.Point(369, 432);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(87, 39);
             this.exit.TabIndex = 2;
@@ -75,7 +77,7 @@ namespace Menu
             // customize
             // 
             this.customize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.customize.Location = new System.Drawing.Point(339, 169);
+            this.customize.Location = new System.Drawing.Point(337, 237);
             this.customize.Name = "customize";
             this.customize.Size = new System.Drawing.Size(158, 59);
             this.customize.TabIndex = 3;
@@ -85,12 +87,32 @@ namespace Menu
             // difficulty
             // 
             this.difficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.difficulty.Location = new System.Drawing.Point(339, 234);
+            this.difficulty.Location = new System.Drawing.Point(337, 302);
             this.difficulty.Name = "difficulty";
             this.difficulty.Size = new System.Drawing.Size(158, 59);
             this.difficulty.TabIndex = 4;
             this.difficulty.Text = "Difficulty";
             this.difficulty.UseVisualStyleBackColor = true;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label1.Location = new System.Drawing.Point(262, 9);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(321, 55);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "N.T.E. Studio";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.Location = new System.Drawing.Point(307, 94);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(221, 39);
+            this.label2.TabIndex = 6;
+            this.label2.Text = "Snake game";
             // 
             // Menu
             // 
@@ -98,6 +120,8 @@ namespace Menu
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
             this.ClientSize = new System.Drawing.Size(840, 503);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.difficulty);
             this.Controls.Add(this.customize);
             this.Controls.Add(this.exit);
@@ -106,6 +130,7 @@ namespace Menu
             this.Name = "Menu";
             this.Text = "Form1";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -116,6 +141,8 @@ namespace Menu
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button customize;
         private System.Windows.Forms.Button difficulty;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label2;
     }
 }
 

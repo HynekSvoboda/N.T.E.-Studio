@@ -40,7 +40,7 @@ namespace Menu
             // 
             // snake_picBox
             // 
-            this.snake_picBox.BackColor = System.Drawing.Color.LightGreen;
+            this.snake_picBox.BackColor = System.Drawing.Color.Lime;
             this.snake_picBox.Location = new System.Drawing.Point(75, 44);
             this.snake_picBox.Name = "snake_picBox";
             this.snake_picBox.Size = new System.Drawing.Size(1325, 825);
@@ -50,32 +50,37 @@ namespace Menu
             // 
             // start_button
             // 
+            this.start_button.BackColor = System.Drawing.Color.Gold;
+            this.start_button.FlatAppearance.BorderSize = 2;
+            this.start_button.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LawnGreen;
+            this.start_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.start_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.start_button.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_button.Location = new System.Drawing.Point(1600, 44);
+            this.start_button.Location = new System.Drawing.Point(1476, 44);
             this.start_button.Name = "start_button";
             this.start_button.Size = new System.Drawing.Size(192, 86);
             this.start_button.TabIndex = 1;
             this.start_button.Text = "Start";
-            this.start_button.UseVisualStyleBackColor = true;
+            this.start_button.UseVisualStyleBackColor = false;
             this.start_button.Click += new System.EventHandler(this.start_button_Click);
             // 
             // score_lbl
             // 
             this.score_lbl.AutoSize = true;
-            this.score_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score_lbl.Location = new System.Drawing.Point(1597, 177);
+            this.score_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score_lbl.Location = new System.Drawing.Point(1470, 253);
             this.score_lbl.Name = "score_lbl";
-            this.score_lbl.Size = new System.Drawing.Size(65, 18);
+            this.score_lbl.Size = new System.Drawing.Size(107, 32);
             this.score_lbl.TabIndex = 2;
             this.score_lbl.Text = "Score: ";
             // 
             // highscore_lbl
             // 
             this.highscore_lbl.AutoSize = true;
-            this.highscore_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highscore_lbl.Location = new System.Drawing.Point(1597, 212);
+            this.highscore_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highscore_lbl.Location = new System.Drawing.Point(1470, 301);
             this.highscore_lbl.Name = "highscore_lbl";
-            this.highscore_lbl.Size = new System.Drawing.Size(99, 18);
+            this.highscore_lbl.Size = new System.Drawing.Size(165, 32);
             this.highscore_lbl.TabIndex = 3;
             this.highscore_lbl.Text = "Highscore: ";
             // 
@@ -88,6 +93,7 @@ namespace Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.Color.MediumOrchid;
             this.ClientSize = new System.Drawing.Size(1846, 905);
             this.Controls.Add(this.highscore_lbl);
             this.Controls.Add(this.score_lbl);

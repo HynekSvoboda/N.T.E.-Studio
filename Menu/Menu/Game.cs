@@ -37,8 +37,8 @@ namespace Menu
         public Game()
         {
             InitializeComponent();
-            Width = 20;
-            Height = 20;
+            Width = 23;
+            Height = 23;
             if (!once)
             {
                 once = true;
@@ -58,7 +58,7 @@ namespace Menu
             direction = "up";
             Snake.Clear();
 
-            start_button.Visible = false;
+            start_button.Enabled = false;
             score = 0;
             score_lbl.Text = "Score: " + score;
 
@@ -223,7 +223,7 @@ namespace Menu
         private void GameOver()
         {
             tick_timer.Stop();
-            start_button.Visible = true;
+            start_button.Enabled = true;
 
             if (score > highscore)
             {

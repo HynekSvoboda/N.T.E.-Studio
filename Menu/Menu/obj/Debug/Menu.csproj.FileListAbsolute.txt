@@ -35,3 +35,15 @@ C:\Users\marsy\Source\Repos\Had - game\Menu\Menu\obj\Debug\Menu.csproj.GenerateR
 C:\Users\marsy\Source\Repos\Had - game\Menu\Menu\obj\Debug\Menu.csproj.CoreCompileInputs.cache
 C:\Users\marsy\Source\Repos\Had - game\Menu\Menu\obj\Debug\Menu.exe
 C:\Users\marsy\Source\Repos\Had - game\Menu\Menu\obj\Debug\Menu.pdb
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\bin\Debug\Menu.exe.config
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\bin\Debug\Menu.exe
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\bin\Debug\Menu.pdb
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.AssemblyReference.cache
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Game.resources
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Menu.resources
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Options.resources
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.Properties.Resources.resources
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.GenerateResource.cache
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.csproj.CoreCompileInputs.cache
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.exe
+C:\Users\Nadupaná mašina\Source\Repos\N.T.E.-Studio\Menu\Menu\obj\Debug\Menu.pdb

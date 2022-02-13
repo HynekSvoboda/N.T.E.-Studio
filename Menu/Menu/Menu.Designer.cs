@@ -87,6 +87,7 @@ namespace Menu
             // 
             // customize
             // 
+            this.customize.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.customize.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.customize.Location = new System.Drawing.Point(485, 428);
             this.customize.Name = "customize";
@@ -97,6 +98,7 @@ namespace Menu
             // 
             // difficulty
             // 
+            this.difficulty.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.difficulty.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.difficulty.FlatAppearance.BorderColor = System.Drawing.Color.Magenta;
             this.difficulty.FlatAppearance.BorderSize = 2;
@@ -105,7 +107,7 @@ namespace Menu
             this.difficulty.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Cyan;
             this.difficulty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.difficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.difficulty.Location = new System.Drawing.Point(339, 252);
+            this.difficulty.Location = new System.Drawing.Point(339, 264);
             this.difficulty.Name = "difficulty";
             this.difficulty.Size = new System.Drawing.Size(158, 43);
             this.difficulty.TabIndex = 4;
@@ -114,6 +116,7 @@ namespace Menu
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label1.Location = new System.Drawing.Point(262, 9);
@@ -124,6 +127,7 @@ namespace Menu
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 26.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.Location = new System.Drawing.Point(307, 94);
@@ -186,6 +190,7 @@ namespace Menu
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();
 

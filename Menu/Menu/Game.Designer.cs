@@ -56,11 +56,11 @@ namespace Menu
             this.start_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.start_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.start_button.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_button.Location = new System.Drawing.Point(1476, 44);
+            this.start_button.Location = new System.Drawing.Point(1443, 92);
             this.start_button.Name = "start_button";
-            this.start_button.Size = new System.Drawing.Size(192, 86);
+            this.start_button.Size = new System.Drawing.Size(203, 94);
             this.start_button.TabIndex = 1;
-            this.start_button.Text = "Start";
+            this.start_button.Text = "Retry";
             this.start_button.UseVisualStyleBackColor = false;
             this.start_button.Click += new System.EventHandler(this.start_button_Click);
             // 
@@ -86,7 +86,7 @@ namespace Menu
             // 
             // tick_timer
             // 
-            this.tick_timer.Interval = 40;
+            this.tick_timer.Interval = 20;
             this.tick_timer.Tick += new System.EventHandler(this.tick_timer_Tick);
             // 
             // Game

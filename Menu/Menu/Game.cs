@@ -21,6 +21,7 @@ namespace Menu
 
         private List<Circle> Snake = new List<Circle> ();
         private Circle food = new Circle();
+        private Circle food2 = new Circle();
 
         string direction;
 
@@ -30,20 +31,19 @@ namespace Menu
         int score;
         int highscore;
 
+        bool apple1, apple2;
+        bool genApple2;
+
         Random rnd = new Random();
         bool once = false;
         bool goLeft, goRight, goDown, goUp;
 
         public Game()
-        {
+        {            
             InitializeComponent();
-            Width = 23;
-            Height = 23;
-            if (!once)
-            {
-                once = true;
-                //direction = "up";
-            }
+            Width = 20;
+            Height = 20;
+            Restart();
         }
 
         private void start_button_Click(object sender, EventArgs e)
@@ -72,6 +72,7 @@ namespace Menu
             }
 
             food = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            //food2 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
 
             tick_timer.Start();
         }
@@ -88,7 +89,11 @@ namespace Menu
 
             Snake.Add(body);
 
-            food = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            if (apple1) food = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            if (apple2) food2 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+
+            apple1 = false;
+            apple2 = false;
         }
 
         private void tick_timer_Tick(object sender, EventArgs e)
@@ -138,6 +143,12 @@ namespace Menu
 
                     if (Snake[i].X == food.X && Snake[i].Y == food.Y)
                     {
+                        apple1 = true;
+                        Food();
+                    }
+                    if (Snake[i].X == food2.X && Snake[i].Y == food2.Y)
+                    {
+                        apple2 = true;
                         Food();
                     }
 
@@ -213,11 +224,11 @@ namespace Menu
                     Width, Height
                     ));
             }
-            screen.FillEllipse(Brushes.DarkRed, new Rectangle
-            (
-            food.X * Width,
-            food.Y * Height,Width, Height
-            ));
+
+            genApple2 = score > 10;
+
+            screen.FillEllipse(Brushes.Red, new Rectangle(food.X * Width,food.Y * Height,Width, Height));
+            if(genApple2)screen.FillEllipse(Brushes.Red, new Rectangle(food2.X * Width, food2.Y * Height, Width, Height));
         }
 
         private void GameOver()

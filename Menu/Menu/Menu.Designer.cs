@@ -34,7 +34,6 @@ namespace Menu
             this.exit = new System.Windows.Forms.Button();
             this.customize = new System.Windows.Forms.Button();
             this.difficulty = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.endless = new System.Windows.Forms.Button();
             this.challenge = new System.Windows.Forms.Button();
@@ -52,7 +51,8 @@ namespace Menu
             this.play.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.play.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.play.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.play.Location = new System.Drawing.Point(301, 322);
+            this.play.ForeColor = System.Drawing.Color.White;
+            this.play.Location = new System.Drawing.Point(419, 335);
             this.play.Name = "play";
             this.play.Size = new System.Drawing.Size(208, 65);
             this.play.TabIndex = 0;
@@ -74,7 +74,8 @@ namespace Menu
             this.options.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.options.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.options.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.options.Location = new System.Drawing.Point(299, 605);
+            this.options.ForeColor = System.Drawing.Color.White;
+            this.options.Location = new System.Drawing.Point(417, 618);
             this.options.Name = "options";
             this.options.Size = new System.Drawing.Size(208, 65);
             this.options.TabIndex = 1;
@@ -96,7 +97,8 @@ namespace Menu
             this.exit.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.exit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.exit.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.exit.Location = new System.Drawing.Point(338, 662);
+            this.exit.ForeColor = System.Drawing.Color.White;
+            this.exit.Location = new System.Drawing.Point(456, 675);
             this.exit.Name = "exit";
             this.exit.Size = new System.Drawing.Size(117, 54);
             this.exit.TabIndex = 2;
@@ -118,7 +120,8 @@ namespace Menu
             this.customize.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.customize.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customize.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.customize.Location = new System.Drawing.Point(268, 552);
+            this.customize.ForeColor = System.Drawing.Color.White;
+            this.customize.Location = new System.Drawing.Point(386, 565);
             this.customize.Name = "customize";
             this.customize.Size = new System.Drawing.Size(260, 57);
             this.customize.TabIndex = 3;
@@ -140,7 +143,8 @@ namespace Menu
             this.difficulty.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.difficulty.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.difficulty.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.difficulty.Location = new System.Drawing.Point(282, 492);
+            this.difficulty.ForeColor = System.Drawing.Color.White;
+            this.difficulty.Location = new System.Drawing.Point(400, 505);
             this.difficulty.Name = "difficulty";
             this.difficulty.Size = new System.Drawing.Size(227, 64);
             this.difficulty.TabIndex = 4;
@@ -150,26 +154,16 @@ namespace Menu
             this.difficulty.MouseEnter += new System.EventHandler(this.difficulty_MouseEnter);
             this.difficulty.MouseLeave += new System.EventHandler(this.difficulty_MouseLeave);
             // 
-            // label1
-            // 
-            this.label1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label1.Location = new System.Drawing.Point(197, 9);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(427, 73);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "N.T.E. Studio";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
-            // 
             // label2
             // 
             this.label2.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.label2.Location = new System.Drawing.Point(258, 82);
+            this.label2.BackColor = System.Drawing.Color.Transparent;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(376, 95);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(305, 55);
+            this.label2.Size = new System.Drawing.Size(403, 73);
             this.label2.TabIndex = 6;
             this.label2.Text = "Snake game";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -186,7 +180,8 @@ namespace Menu
             this.endless.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.endless.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.endless.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.endless.Location = new System.Drawing.Point(299, 379);
+            this.endless.ForeColor = System.Drawing.Color.White;
+            this.endless.Location = new System.Drawing.Point(417, 392);
             this.endless.Name = "endless";
             this.endless.Size = new System.Drawing.Size(210, 59);
             this.endless.TabIndex = 7;
@@ -208,7 +203,8 @@ namespace Menu
             this.challenge.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Transparent;
             this.challenge.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.challenge.Font = new System.Drawing.Font("Microsoft Sans Serif", 36F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
-            this.challenge.Location = new System.Drawing.Point(271, 432);
+            this.challenge.ForeColor = System.Drawing.Color.White;
+            this.challenge.Location = new System.Drawing.Point(389, 445);
             this.challenge.Name = "challenge";
             this.challenge.Size = new System.Drawing.Size(257, 64);
             this.challenge.TabIndex = 8;
@@ -222,12 +218,12 @@ namespace Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.LawnGreen;
-            this.ClientSize = new System.Drawing.Size(840, 853);
+            this.BackColor = System.Drawing.Color.LightBlue;
+            this.BackgroundImage = global::Menu.Properties.Resources.asd;
+            this.ClientSize = new System.Drawing.Size(1076, 879);
             this.Controls.Add(this.challenge);
             this.Controls.Add(this.endless);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.difficulty);
             this.Controls.Add(this.customize);
             this.Controls.Add(this.exit);
@@ -249,7 +245,6 @@ namespace Menu
         private System.Windows.Forms.Button exit;
         private System.Windows.Forms.Button customize;
         private System.Windows.Forms.Button difficulty;
-        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button endless;
         private System.Windows.Forms.Button challenge;

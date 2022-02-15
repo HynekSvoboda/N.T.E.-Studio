@@ -77,42 +77,42 @@ namespace Menu
 
         private void play_MouseEnter(object sender, EventArgs e)
         {
-            play.ForeColor = Color.Orange;
+            play.ForeColor = Color.LawnGreen;
         }
 
         private void play_MouseLeave(object sender, EventArgs e)
         {
-            play.ForeColor = Color.Black;
+            play.ForeColor = Color.White;
         }
 
         private void difficulty_MouseEnter(object sender, EventArgs e)
         {
-            difficulty.ForeColor = Color.Orange;
+            difficulty.ForeColor = Color.LawnGreen;
         }
 
         private void difficulty_MouseLeave(object sender, EventArgs e)
         {
-            difficulty.ForeColor = Color.Black;
+            difficulty.ForeColor = Color.White;
         }
 
         private void customize_MouseEnter(object sender, EventArgs e)
         {
-            customize.ForeColor = Color.Orange;
+            customize.ForeColor = Color.LawnGreen;
         }
 
         private void customize_MouseLeave(object sender, EventArgs e)
         {
-            customize.ForeColor = Color.Black;
+            customize.ForeColor = Color.White;
         }
 
         private void options_MouseEnter(object sender, EventArgs e)
         {
-            options.ForeColor = Color.Orange;
+            options.ForeColor = Color.LawnGreen;
         }
 
         private void options_MouseLeave(object sender, EventArgs e)
         {
-            options.ForeColor = Color.Black;
+            options.ForeColor = Color.White;
         }
 
         private void exit_MouseEnter(object sender, EventArgs e)
@@ -122,27 +122,27 @@ namespace Menu
 
         private void exit_MouseLeave(object sender, EventArgs e)
         {
-            exit.ForeColor = Color.Black;
+            exit.ForeColor = Color.White;
         }
 
         private void endless_MouseEnter(object sender, EventArgs e)
         {
-            endless.ForeColor = Color.Orange;
+            endless.ForeColor = Color.LawnGreen;
         }
 
         private void endless_MouseLeave(object sender, EventArgs e)
         {
-            endless.ForeColor = Color.Black;
+            endless.ForeColor = Color.White;
         }
 
         private void challenge_MouseEnter(object sender, EventArgs e)
         {
-            challenge.ForeColor = Color.Orange;
+            challenge.ForeColor = Color.LawnGreen;
         }
 
         private void challenge_MouseLeave(object sender, EventArgs e)
         {
-            challenge.ForeColor = Color.Black;
+            challenge.ForeColor = Color.White;
         }
     }
 }

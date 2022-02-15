@@ -162,7 +162,7 @@ namespace Menu
             this.label2.BackColor = System.Drawing.Color.Transparent;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 48F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(376, 95);
+            this.label2.Location = new System.Drawing.Point(318, 79);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(403, 73);
             this.label2.TabIndex = 6;

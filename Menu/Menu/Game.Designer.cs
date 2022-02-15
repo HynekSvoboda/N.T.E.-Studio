@@ -30,6 +30,7 @@ namespace Menu
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Game));
             this.snake_picBox = new System.Windows.Forms.PictureBox();
             this.start_button = new System.Windows.Forms.Button();
             this.score_lbl = new System.Windows.Forms.Label();
@@ -99,6 +100,7 @@ namespace Menu
             this.Controls.Add(this.score_lbl);
             this.Controls.Add(this.start_button);
             this.Controls.Add(this.snake_picBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.Name = "Game";
             this.ShowIcon = false;

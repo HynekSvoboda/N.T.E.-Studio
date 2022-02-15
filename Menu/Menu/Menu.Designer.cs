@@ -29,6 +29,7 @@ namespace Menu
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Menu));
             this.play = new System.Windows.Forms.Button();
             this.options = new System.Windows.Forms.Button();
             this.exit = new System.Windows.Forms.Button();
@@ -229,9 +230,10 @@ namespace Menu
             this.Controls.Add(this.exit);
             this.Controls.Add(this.options);
             this.Controls.Add(this.play);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "Menu";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Form1";
+            this.Text = "Menu";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.ResumeLayout(false);
             this.PerformLayout();

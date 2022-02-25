@@ -10,20 +10,33 @@ using System.Windows.Forms;
 
 namespace Menu
 {
-    
+
     public partial class Game : Form
     {
         int Width;
         int Height;
 
+        
+
         //int X = 0;
         //int Y = 0;
 
-        private List<Circle> Snake = new List<Circle> ();
-        private Circle food = new Circle();
-        private Circle food2 = new Circle();
+        private List<Circle> Snake = new List<Circle>();
+        private Circle apple_1 = new Circle();
+        private Circle apple_2 = new Circle();
+        private Circle apple_3 = new Circle();
+        private Circle apple_4 = new Circle();
+        private Circle apple_5 = new Circle();
+
+        private Circle goldenApple = new Circle();
+
+
+        private List<Circle> Jidlo = new List<Circle>();
 
         string direction;
+
+        public string mode;
+        
 
         int maxWidth;
         int maxHeight;
@@ -31,16 +44,16 @@ namespace Menu
         int score;
         int highscore;
 
-        bool apple1, apple2;
-        bool genApple2;
+        bool appleNum1, appleNum2, appleNum3, appleNum4, appleNum5;
+        //int genApple1, genApple2, genApple3, genApple4, genApple5;
 
         Random rnd = new Random();
-        bool once = false;
         bool goLeft, goRight, goDown, goUp;
 
-        public Game()
-        {            
-            InitializeComponent();
+        public Game(string aMode)
+        {
+            InitializeComponent();            
+            mode = aMode;           
             Width = 20;
             Height = 20;
             Restart();
@@ -48,11 +61,12 @@ namespace Menu
 
         private void start_button_Click(object sender, EventArgs e)
         {
-            Restart();            
+            Restart();
         }
 
         public void Restart()
         {
+            if (mode == "endless") highscore_lbl.Visible = false;
             maxWidth = snake_picBox.Width / Width - 1;
             maxHeight = snake_picBox.Height / Height - 1;
             direction = "up";
@@ -71,30 +85,11 @@ namespace Menu
                 Snake.Add(body);
             }
 
-            food = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
-            //food2 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
-
+            apple_1 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            
             tick_timer.Start();
         }
-        private void Food()
-        {
-            score++;
-            score_lbl.Text = "Score: " + score;
 
-            Circle body = new Circle
-            {
-                X = Snake[Snake.Count - 1].X,
-                Y = Snake[Snake.Count - 1].Y
-            };
-
-            Snake.Add(body);
-
-            if (apple1) food = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
-            if (apple2) food2 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
-
-            apple1 = false;
-            apple2 = false;
-        }
 
         private void tick_timer_Tick(object sender, EventArgs e)
         {
@@ -104,21 +99,21 @@ namespace Menu
             if (goUp) direction = "up";
 
             for (int i = Snake.Count - 1; i >= 0; i--)
-            {               
+            {
                 if (i == 0)
                 {
                     switch (direction)
                     {
-                        case "left":                           
+                        case "left":
                             Snake[i].X--;
                             break;
-                        case "right":                            
+                        case "right":
                             Snake[i].X++;
                             break;
-                        case "down":                            
+                        case "down":
                             Snake[i].Y++;
                             break;
-                        case "up":                            
+                        case "up":
                             Snake[i].Y--;
                             break;
                     }
@@ -133,55 +128,68 @@ namespace Menu
                     if (Snake[i].Y < 0) Snake[i].Y = maxHeight;
                     if (Snake[i].Y > maxHeight) Snake[i].Y = 0;
 
-                    for (int j = 1; j < Snake.Count; j++)
+
+                    if (mode != "endless")
                     {
-                        if (Snake[i].X == Snake[j].X && Snake[i].Y == Snake[j].Y)
+                        for (int j = 1; j < Snake.Count; j++)
                         {
-                            GameOver();
+                            if (Snake[i].X == Snake[j].X && Snake[i].Y == Snake[j].Y)
+                            {
+                                GameOver();
+                            }
                         }
                     }
-
-                    if (Snake[i].X == food.X && Snake[i].Y == food.Y)
+                    if (Snake[i].X == apple_1.X && Snake[i].Y == apple_1.Y)
                     {
-                        apple1 = true;
+                        appleNum1 = true;
                         Food();
                     }
-                    if (Snake[i].X == food2.X && Snake[i].Y == food2.Y)
+                    if (Snake[i].X == apple_2.X && Snake[i].Y == apple_2.Y)
                     {
-                        apple2 = true;
+                        appleNum2 = true;
+                        Food();
+                    }
+                    if (Snake[i].X == apple_3.X && Snake[i].Y == apple_3.Y)
+                    {
+                        appleNum3 = true;
+                        Food();
+                    }
+                    if (Snake[i].X == apple_3.X && Snake[i].Y == apple_3.Y)
+                    {
+                        appleNum4 = true;
+                        Food();
+                    }
+                    if (Snake[i].X == apple_3.X && Snake[i].Y == apple_3.Y)
+                    {
+                        appleNum5 = true;
                         Food();
                     }
 
                 }
                 else
-                {                    
+                {
                     Snake[i].X = Snake[i - 1].X;
                     Snake[i].Y = Snake[i - 1].Y;
                 }
             }
-            snake_picBox.Invalidate();
+            snake_picBox.Refresh();
         }
 
         private void Game_KeyDown(object sender, KeyEventArgs e)
         {
-            /*if (e.KeyCode == Keys.W) goUp = true;
-            if (e.KeyCode == Keys.S) goDown = true;
-            if (e.KeyCode == Keys.A) goLeft = true;
-            if (e.KeyCode == Keys.D) goRight = true;*/
-            
-            if (e.KeyCode == Keys.Left && direction != "right")
+            if ((e.KeyCode == Keys.Left || e.KeyCode == Keys.A) && direction != "right")
             {
                 goLeft = true;
             }
-            if (e.KeyCode == Keys.Right && direction != "left")
+            if ((e.KeyCode == Keys.Right || e.KeyCode == Keys.D) && direction != "left")
             {
                 goRight = true;
             }
-            if (e.KeyCode == Keys.Down && direction != "up")
+            if ((e.KeyCode == Keys.Down || e.KeyCode == Keys.S) && direction != "up")
             {
                 goDown = true;
             }
-            if (e.KeyCode == Keys.Up && direction != "down")
+            if ((e.KeyCode == Keys.Up || e.KeyCode == Keys.W) && direction != "down")
             {
                 goUp = true;
             }
@@ -189,24 +197,24 @@ namespace Menu
 
         private void Game_KeyUp(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode == Keys.Left)
+            if (e.KeyCode == Keys.Left || e.KeyCode == Keys.A)
             {
                 goLeft = false;
             }
-            if (e.KeyCode == Keys.Right)
+            if (e.KeyCode == Keys.Right || e.KeyCode == Keys.D)
             {
                 goRight = false;
             }
-            if (e.KeyCode == Keys.Down)
+            if (e.KeyCode == Keys.Down || e.KeyCode == Keys.S)
             {
                 goDown = false;
             }
-            if (e.KeyCode == Keys.Up)
+            if (e.KeyCode == Keys.Up || e.KeyCode == Keys.W)
             {
                 goUp = false;
             }
         }
-                
+
         private void snake_picBox_Paint(object sender, PaintEventArgs e)
         {
             Graphics screen = e.Graphics;
@@ -225,10 +233,46 @@ namespace Menu
                     ));
             }
 
-            genApple2 = score > 10;
+            screen.FillEllipse(Brushes.Red, new Rectangle(apple_1.X * Width, apple_1.Y * Height, Width, Height));
+            if (score > 10) screen.FillEllipse(Brushes.Red, new Rectangle(apple_2.X * Width, apple_2.Y * Height, Width, Height));
+            if (score > 20) screen.FillEllipse(Brushes.Red, new Rectangle(apple_3.X * Width, apple_3.Y * Height, Width, Height));
+            if (score > 40) screen.FillEllipse(Brushes.Red, new Rectangle(apple_4.X * Width, apple_4.Y * Height, Width, Height));
+            if (score > 80) screen.FillEllipse(Brushes.Red, new Rectangle(apple_5.X * Width, apple_5.Y * Height, Width, Height));
+        }
 
-            screen.FillEllipse(Brushes.Red, new Rectangle(food.X * Width,food.Y * Height,Width, Height));
-            if(genApple2)screen.FillEllipse(Brushes.Red, new Rectangle(food2.X * Width, food2.Y * Height, Width, Height));
+        private void Food()
+        {
+            score++;
+            if (score > 50) score++;
+            score_lbl.Text = "Score: " + score;
+
+            Circle body = new Circle
+            {
+                X = Snake[Snake.Count - 1].X,
+                Y = Snake[Snake.Count - 1].Y
+            };
+
+            Snake.Add(body);
+
+            if (score == 10) apple_2 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            if (score == 20) apple_3 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            if (score == 40) apple_4 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            if (score == 80) apple_5 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+
+            if (appleNum1) apple_1 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            if (appleNum2 && score > 10) apple_2 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            if (appleNum3 && score > 20) apple_3 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            if (appleNum4 && score > 40) apple_4 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+            if (appleNum5 && score > 80) apple_5 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
+
+
+
+            appleNum1 = false;
+            appleNum2 = false;
+            appleNum3 = false;
+            appleNum4 = false;
+            appleNum5 = false;
+
         }
 
         private void GameOver()
@@ -242,7 +286,7 @@ namespace Menu
                 highscore_lbl.Text = "HighScore: " + highscore;
             }
         }
-        
+
     }
 
     public class Circle

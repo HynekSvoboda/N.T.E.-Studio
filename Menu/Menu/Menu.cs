@@ -16,16 +16,18 @@ namespace Menu
         {
             InitializeComponent();
         }
+        public string playingClassic;
+        public string playingEndless;
+        public string playingChallenge;
 
-        
-
-        private void play_Click(object sender, EventArgs e)
-        {            
-            Game game = new Game();
+        private void ClassicPlay(object sender, EventArgs e)
+        {
+            playingClassic = "classic";
+            Game game = new Game(playingClassic);
             this.Hide();
             game.ShowDialog();
             this.Close();
-        }
+        }       
 
         private void options_Click(object sender, EventArgs e)
         {
@@ -36,9 +38,10 @@ namespace Menu
         }
         private void endless_Click(object sender, EventArgs e)
         {
-            EndlessGame endless = new EndlessGame();
+            playingEndless = "endless";
+            Game game = new Game(playingEndless);
             this.Hide();
-            endless.ShowDialog();
+            game.ShowDialog();
             this.Close();
         }
         private void challenge_Click(object sender, EventArgs e)
@@ -144,5 +147,7 @@ namespace Menu
         {
             challenge.ForeColor = Color.White;
         }
+
+        
     }
 }

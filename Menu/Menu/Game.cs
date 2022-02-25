@@ -44,8 +44,7 @@ namespace Menu
         int score;
         int highscore;
 
-        bool appleNum1, appleNum2, appleNum3, appleNum4, appleNum5;
-        //int genApple1, genApple2, genApple3, genApple4, genApple5;
+        bool appleNum1, appleNum2, appleNum3, appleNum4, appleNum5;        
 
         Random rnd = new Random();
         bool goLeft, goRight, goDown, goUp;
@@ -117,17 +116,21 @@ namespace Menu
                             Snake[i].Y--;
                             break;
                     }
+                    /*if (mode == "classic")
+                    {
+                        if (Snake[i].X < 0) GameOver();
+                        if (Snake[i].X > maxWidth) GameOver();
+                        if (Snake[i].Y < 0) GameOver();
+                        if (Snake[i].Y > maxHeight) GameOver();
+                    }*/
 
-                    /*if (Snake[i].X < 0) GameOver();
-                    if (Snake[i].X > maxWidth) GameOver();
-                    if (Snake[i].Y < 0) GameOver();
-                    if (Snake[i].Y > maxHeight) GameOver();*/
-
-                    if (Snake[i].X < 0) Snake[i].X = maxWidth;
-                    if (Snake[i].X > maxWidth) Snake[i].X = 0;
-                    if (Snake[i].Y < 0) Snake[i].Y = maxHeight;
-                    if (Snake[i].Y > maxHeight) Snake[i].Y = 0;
-
+                    //if (mode == "endlles")
+                    {
+                        if (Snake[i].X < 0) Snake[i].X = maxWidth;
+                        if (Snake[i].X > maxWidth) Snake[i].X = 0;
+                        if (Snake[i].Y < 0) Snake[i].Y = maxHeight;
+                        if (Snake[i].Y > maxHeight) Snake[i].Y = 0;
+                    }
 
                     if (mode != "endless")
                     {

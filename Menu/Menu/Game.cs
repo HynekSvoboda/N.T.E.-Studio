@@ -35,8 +35,7 @@ namespace Menu
 
         string direction;
 
-        public string mode;
-        
+        public string mode;        
 
         int maxWidth;
         int maxHeight;
@@ -63,15 +62,32 @@ namespace Menu
             Restart();
         }
 
+        private void BackToMenu_Click(object sender, EventArgs e)
+        {
+            GameOver();
+            Menu menu = new Menu();
+            this.Hide();
+            menu.ShowDialog();
+            this.Close();
+        }
+
         public void Restart()
         {
-            if (mode == "endless") highscore_lbl.Visible = false;
+
+
+            if (mode == "classic") heading_lbl.Text = "Classic\nMode";
+            if (mode == "endless")
+            {
+                heading_lbl.Text = "Endless\nMode";
+                highscore_lbl.Visible = false;
+            }
             maxWidth = snake_picBox.Width / Width - 1;
             maxHeight = snake_picBox.Height / Height - 1;
             direction = "up";
             Snake.Clear();
 
-            start_button.Enabled = false;
+           
+            //start_button.Enabled = false;
             score = 0;
             score_lbl.Text = "Score: " + score;
 

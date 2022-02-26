@@ -36,6 +36,8 @@ namespace Menu
             this.score_lbl = new System.Windows.Forms.Label();
             this.highscore_lbl = new System.Windows.Forms.Label();
             this.tick_timer = new System.Windows.Forms.Timer(this.components);
+            this.heading_lbl = new System.Windows.Forms.Label();
+            this.button1 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.snake_picBox)).BeginInit();
             this.SuspendLayout();
             // 
@@ -57,7 +59,7 @@ namespace Menu
             this.start_button.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
             this.start_button.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.start_button.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.start_button.Location = new System.Drawing.Point(1443, 92);
+            this.start_button.Location = new System.Drawing.Point(1446, 654);
             this.start_button.Name = "start_button";
             this.start_button.Size = new System.Drawing.Size(203, 94);
             this.start_button.TabIndex = 1;
@@ -69,7 +71,7 @@ namespace Menu
             // 
             this.score_lbl.AutoSize = true;
             this.score_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.score_lbl.Location = new System.Drawing.Point(1470, 253);
+            this.score_lbl.Location = new System.Drawing.Point(1467, 393);
             this.score_lbl.Name = "score_lbl";
             this.score_lbl.Size = new System.Drawing.Size(107, 32);
             this.score_lbl.TabIndex = 2;
@@ -79,7 +81,7 @@ namespace Menu
             // 
             this.highscore_lbl.AutoSize = true;
             this.highscore_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.highscore_lbl.Location = new System.Drawing.Point(1470, 301);
+            this.highscore_lbl.Location = new System.Drawing.Point(1467, 441);
             this.highscore_lbl.Name = "highscore_lbl";
             this.highscore_lbl.Size = new System.Drawing.Size(165, 32);
             this.highscore_lbl.TabIndex = 3;
@@ -90,12 +92,40 @@ namespace Menu
             this.tick_timer.Interval = 20;
             this.tick_timer.Tick += new System.EventHandler(this.tick_timer_Tick);
             // 
+            // heading_lbl
+            // 
+            this.heading_lbl.AutoSize = true;
+            this.heading_lbl.Font = new System.Drawing.Font("Comic Sans MS", 69.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.heading_lbl.Location = new System.Drawing.Point(1451, 53);
+            this.heading_lbl.Name = "heading_lbl";
+            this.heading_lbl.Size = new System.Drawing.Size(268, 130);
+            this.heading_lbl.TabIndex = 4;
+            this.heading_lbl.Text = "Text";
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.Gold;
+            this.button1.FlatAppearance.BorderSize = 2;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.LawnGreen;
+            this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Orange;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Font = new System.Drawing.Font("Arial Rounded MT Bold", 20.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.Location = new System.Drawing.Point(1446, 775);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(315, 94);
+            this.button1.TabIndex = 5;
+            this.button1.Text = "Back to menu";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.BackToMenu_Click);
+            // 
             // Game
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumOrchid;
             this.ClientSize = new System.Drawing.Size(1846, 905);
+            this.Controls.Add(this.button1);
+            this.Controls.Add(this.heading_lbl);
             this.Controls.Add(this.highscore_lbl);
             this.Controls.Add(this.score_lbl);
             this.Controls.Add(this.start_button);
@@ -121,5 +151,7 @@ namespace Menu
         private System.Windows.Forms.Label score_lbl;
         private System.Windows.Forms.Label highscore_lbl;
         private System.Windows.Forms.Timer tick_timer;
+        private System.Windows.Forms.Label heading_lbl;
+        private System.Windows.Forms.Button button1;
     }
 }

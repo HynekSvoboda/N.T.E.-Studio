@@ -46,31 +46,32 @@ namespace Menu
         }
         private void challenge_Click(object sender, EventArgs e)
         {
-            ChallengeGame challenge = new ChallengeGame();
+            /*playingClassic = "challenge";
+            Game game = new Game(playingClassic);
             this.Hide();
-            challenge.ShowDialog();
-            this.Close();
+            game.ShowDialog();
+            this.Close();*/
         }
         private void difficulty_Click(object sender, EventArgs e)
-        {
+        {/*
             Difficulty difficulty = new Difficulty();
             this.Hide();
             difficulty.ShowDialog();
-            this.Close();
+            this.Close();*/
         }
         private void customize_Click(object sender, EventArgs e)
         {
-            Customize customize = new Customize();
+            /*Customize customize = new Customize();
             this.Hide();
             customize.ShowDialog();
-            this.Close();
+            this.Close();*/
         }
         private void options_Click_1(object sender, EventArgs e)
         {
-            Options options = new Options();
+            /*Options options = new Options();
             this.Hide();
             options.ShowDialog();
-            this.Close();
+            this.Close();*/
         }
 
         private void exit_Click(object sender, EventArgs e)

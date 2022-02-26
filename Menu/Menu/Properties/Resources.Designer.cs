@@ -73,6 +73,16 @@ namespace Menu.Properties {
         /// <summary>
         ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap killIt {
+            get {
+                object obj = ResourceManager.GetObject("killIt", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Vyhledává lokalizovaný prostředek typu System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap New_Project {
             get {
                 object obj = ResourceManager.GetObject("New Project", resourceCulture);

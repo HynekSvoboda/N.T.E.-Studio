@@ -41,7 +41,7 @@ namespace Menu
         int maxHeight;
 
         int score;
-        int highscore;
+        int highscore_classic, highscore_challenge;
 
         bool appleNum1, appleNum2, appleNum3, appleNum4, appleNum5;        
 
@@ -71,11 +71,28 @@ namespace Menu
             this.Close();
         }
 
-        public void Restart()
+        private void challenge_timer_Tick(object sender, EventArgs e)
         {
+            if(tick_timer.Interval >= 10) tick_timer.Interval -= 1;
+            tick_lbl.Text = tick_timer.Interval.ToString();
+        }
 
+        public void Restart()
+        {            
+            tick_timer.Interval = 35;
+            tick_lbl.Text = tick_timer.Interval.ToString();
 
-            if (mode == "classic") heading_lbl.Text = "Classic\nMode";
+            if (mode == "classic")
+            {
+                heading_lbl.Text = "Classic\nMode";
+                //highscore_lbl.Text = highscore_classic;
+            }
+            if (mode == "challenge")
+            {
+                heading_lbl.Text = "Challenge\nMode";
+                //highscore_lbl.Text = highscore_challenge;
+                challenge_timer.Start();
+            }
             if (mode == "endless")
             {
                 heading_lbl.Text = "Endless\nMode";
@@ -83,13 +100,15 @@ namespace Menu
             }
             maxWidth = snake_picBox.Width / Width - 1;
             maxHeight = snake_picBox.Height / Height - 1;
-            direction = "up";
+            direction = "right";
             Snake.Clear();
 
            
-            //start_button.Enabled = false;
+            start_button.Enabled = false;
+            backtomenu_button.Enabled = false;
             score = 0;
             score_lbl.Text = "Score: " + score;
+            
 
             Circle head = new Circle { X = 10, Y = 10 };
             Snake.Add(head);
@@ -132,15 +151,16 @@ namespace Menu
                             Snake[i].Y--;
                             break;
                     }
-                    /*if (mode == "classic")
+
+                    if (mode == "challenge")
                     {
                         if (Snake[i].X < 0) GameOver();
                         if (Snake[i].X > maxWidth) GameOver();
                         if (Snake[i].Y < 0) GameOver();
                         if (Snake[i].Y > maxHeight) GameOver();
-                    }*/
+                    }
 
-                    //if (mode == "endlles")
+                    if (mode == "endless" || mode == "classic") 
                     {
                         if (Snake[i].X < 0) Snake[i].X = maxWidth;
                         if (Snake[i].X > maxWidth) Snake[i].X = 0;
@@ -173,12 +193,12 @@ namespace Menu
                         appleNum3 = true;
                         Food();
                     }
-                    if (Snake[i].X == apple_3.X && Snake[i].Y == apple_3.Y)
+                    if (Snake[i].X == apple_4.X && Snake[i].Y == apple_4.Y)
                     {
                         appleNum4 = true;
                         Food();
                     }
-                    if (Snake[i].X == apple_3.X && Snake[i].Y == apple_3.Y)
+                    if (Snake[i].X == apple_5.X && Snake[i].Y == apple_5.Y)
                     {
                         appleNum5 = true;
                         Food();
@@ -190,6 +210,17 @@ namespace Menu
                     Snake[i].X = Snake[i - 1].X;
                     Snake[i].Y = Snake[i - 1].Y;
                 }
+            }
+
+            if (score > highscore_challenge && mode == "challenge")
+            {
+                highscore_challenge = score;
+                highscore_lbl.Text = "HighScore: " + highscore_challenge;
+            }
+            if (score > highscore_classic && mode == "classic")
+            {
+                highscore_classic = score;
+                highscore_lbl.Text = "HighScore: " + highscore_classic;
             }
             snake_picBox.Refresh();
         }
@@ -262,7 +293,7 @@ namespace Menu
         private void Food()
         {
             score++;
-            if (score > 50) score++;
+            //if (score > 50) score++;
             score_lbl.Text = "Score: " + score;
 
             Circle body = new Circle
@@ -272,6 +303,7 @@ namespace Menu
             };
 
             Snake.Add(body);
+            if(mode == "challenge") Snake.Add(body);
 
             if (score == 10) apple_2 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
             if (score == 20) apple_3 = new Circle { X = rnd.Next(2, maxWidth), Y = rnd.Next(2, maxHeight) };
@@ -297,12 +329,14 @@ namespace Menu
         private void GameOver()
         {
             tick_timer.Stop();
+            challenge_timer.Stop();
             start_button.Enabled = true;
+            backtomenu_button.Enabled = true;
 
-            if (score > highscore)
+            if (score > highscore_classic && mode == "classic")
             {
-                highscore = score;
-                highscore_lbl.Text = "HighScore: " + highscore;
+                highscore_classic = score;
+                highscore_lbl.Text = "HighScore: " + highscore_classic;
             }
         }
 

@@ -46,11 +46,11 @@ namespace Menu
         }
         private void challenge_Click(object sender, EventArgs e)
         {
-            /*playingClassic = "challenge";
+            playingClassic = "challenge";
             Game game = new Game(playingClassic);
             this.Hide();
             game.ShowDialog();
-            this.Close();*/
+            this.Close();
         }
         private void difficulty_Click(object sender, EventArgs e)
         {/*

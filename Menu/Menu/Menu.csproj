@@ -90,6 +90,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="ChallengeGame.resx">
+      <DependentUpon>ChallengeGame.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EndlessGame.resx">
+      <DependentUpon>EndlessGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Game.resx">
       <DependentUpon>Game.cs</DependentUpon>
     </EmbeddedResource>

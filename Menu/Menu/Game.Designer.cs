@@ -113,6 +113,7 @@ namespace Menu
             // snake_picBox
             // 
             this.snake_picBox.BackColor = System.Drawing.Color.Lime;
+            this.snake_picBox.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("snake_picBox.BackgroundImage")));
             this.snake_picBox.Location = new System.Drawing.Point(75, 44);
             this.snake_picBox.Name = "snake_picBox";
             this.snake_picBox.Size = new System.Drawing.Size(1360, 920);
@@ -140,6 +141,7 @@ namespace Menu
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.MediumOrchid;
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1846, 1024);
             this.Controls.Add(this.tick_lbl);
             this.Controls.Add(this.backtomenu_button);

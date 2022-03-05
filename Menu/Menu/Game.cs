@@ -272,8 +272,8 @@ namespace Menu
 
             for (int i = 0; i < Snake.Count - 1; i++)
             {
-                if (i == 0) snakeColor = Brushes.DarkBlue;
-                else snakeColor = Brushes.Blue;
+                if (i == 0) snakeColor = Brushes.Black;
+                else snakeColor = Brushes.Orange;
 
                 screen.FillEllipse(snakeColor, new Rectangle
                     (

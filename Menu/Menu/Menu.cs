@@ -15,6 +15,9 @@ namespace Menu
         public Menu()
         {
             InitializeComponent();
+            /*difficulty.Visible = false;
+            customize.Visible = false;
+            options.Visible = false;*/
         }
         public string playingClassic;
         public string playingEndless;
@@ -68,6 +71,7 @@ namespace Menu
         }
         private void options_Click_1(object sender, EventArgs e)
         {
+            
             /*Options options = new Options();
             this.Hide();
             options.ShowDialog();

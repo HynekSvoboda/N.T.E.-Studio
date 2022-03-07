@@ -62,7 +62,9 @@ namespace Menu
             // score_lbl
             // 
             this.score_lbl.AutoSize = true;
+            this.score_lbl.BackColor = System.Drawing.Color.Transparent;
             this.score_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.score_lbl.ForeColor = System.Drawing.SystemColors.Control;
             this.score_lbl.Location = new System.Drawing.Point(1476, 378);
             this.score_lbl.Name = "score_lbl";
             this.score_lbl.Size = new System.Drawing.Size(115, 33);
@@ -72,7 +74,9 @@ namespace Menu
             // highscore_lbl
             // 
             this.highscore_lbl.AutoSize = true;
+            this.highscore_lbl.BackColor = System.Drawing.Color.Transparent;
             this.highscore_lbl.Font = new System.Drawing.Font("Arial Rounded MT Bold", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.highscore_lbl.ForeColor = System.Drawing.SystemColors.Control;
             this.highscore_lbl.Location = new System.Drawing.Point(1476, 426);
             this.highscore_lbl.Name = "highscore_lbl";
             this.highscore_lbl.Size = new System.Drawing.Size(178, 33);
@@ -87,10 +91,12 @@ namespace Menu
             // heading_lbl
             // 
             this.heading_lbl.AutoSize = true;
-            this.heading_lbl.Font = new System.Drawing.Font("Comic Sans MS", 69.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.heading_lbl.BackColor = System.Drawing.Color.Transparent;
+            this.heading_lbl.Font = new System.Drawing.Font("Comic Sans MS", 69.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(238)));
+            this.heading_lbl.ForeColor = System.Drawing.Color.Cyan;
             this.heading_lbl.Location = new System.Drawing.Point(1460, 27);
             this.heading_lbl.Name = "heading_lbl";
-            this.heading_lbl.Size = new System.Drawing.Size(268, 130);
+            this.heading_lbl.Size = new System.Drawing.Size(271, 130);
             this.heading_lbl.TabIndex = 4;
             this.heading_lbl.Text = "Text";
             // 
@@ -140,7 +146,7 @@ namespace Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.MediumOrchid;
+            this.BackColor = System.Drawing.Color.MediumTurquoise;
             this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
             this.ClientSize = new System.Drawing.Size(1846, 1024);
             this.Controls.Add(this.tick_lbl);

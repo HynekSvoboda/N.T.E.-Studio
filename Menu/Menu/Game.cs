@@ -71,6 +71,11 @@ namespace Menu
             this.Close();
         }
 
+        private void kill_button_Click(object sender, EventArgs e)
+        {
+            GameOver();
+        }
+
         private void challenge_timer_Tick(object sender, EventArgs e)
         {
             if(tick_timer.Interval >= 10) tick_timer.Interval -= 1;
@@ -243,6 +248,14 @@ namespace Menu
             {
                 goUp = true;
             }
+            if (e.KeyCode == Keys.R)
+            {
+                Restart();
+            }
+            if ((e.KeyCode == Keys.Space) || (e.KeyCode == Keys.Escape) || (e.KeyCode == Keys.Back))
+            {
+                GameOver();
+            }
         }
 
         private void Game_KeyUp(object sender, KeyEventArgs e)
@@ -272,8 +285,8 @@ namespace Menu
 
             for (int i = 0; i < Snake.Count - 1; i++)
             {
-                if (i == 0) snakeColor = Brushes.Black;
-                else snakeColor = Brushes.Orange;
+                if (i == 0) snakeColor = Brushes.Purple;
+                else snakeColor = Brushes.PaleVioletRed;
 
                 screen.FillEllipse(snakeColor, new Rectangle
                     (
